@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Перевіряємо, чи розмір екрана підходить для мобільної версії
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  if (!isMobile) {
+    // Якщо це не мобільна версія, виходимо з функції
+    return;
+  }
+
   const slides = document.querySelectorAll(".video-card");
   const existingButtons = document.querySelector(".button-container");
   const videoCardsContainer = document.querySelector(".video-cards");
